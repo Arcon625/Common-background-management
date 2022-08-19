@@ -13,35 +13,44 @@ export default new VueRouter({
   mode: 'history',
   routes: [
     {
-      path: '/',
-      redirect: '/home',
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: () => import('@/pages/Home')
-    },
-    {
-      path: '/user',
-      name: 'user',
-      component: () => import('@/pages/User')
-    },
-    {
-      path: '/mall',
-      name: 'mall',
-      component: () => import('@/pages/Mall')
-    },
-    {
-      path: '/page1',
-      name: 'page1',
-      component: () => import('@/pages/Other/PageOne')
-    },
-    {
-      path: '/page2',
-      name: 'page2',
-      component: () => import('@/pages/Other/PageTwo')
-    },
+      path:'/',
+      name:'main',
+      redirect:'/home',
+      component: () => import('@/components/Main'),
+      children: [
+        // {
+        //   path: '/home',
+        //   name: 'home',
+        //   component: () => import('@/pages/Home')
+        // },
+        // {
+        //   path: '/user',
+        //   name: 'user',
+        //   component: () => import('@/pages/User')
+        // },
+        // {
+        //   path: '/mall',
+        //   name: 'mall',
+        //   component: () => import('@/pages/Mall')
+        // },
+        // {
+        //   path: '/page1',
+        //   name: 'page1',
+        //   component: () => import('@/pages/Other/PageOne')
+        // },
+        // {
+        //   path: '/page2',
+        //   name: 'page2',
+        //   component: () => import('@/pages/Other/PageTwo')
+        // },
 
+      ]
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/pages/Login/index')
+    }
   ],
 
 })

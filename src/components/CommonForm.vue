@@ -1,5 +1,5 @@
 <template>
-  <el-form ref="form" label-width="100px" :inline="isInline" :model="formData">
+  <el-form ref="form" label-width="100px" :inline="isInline" :model="formData" @submit.native.prevent>
     <el-form-item v-for="(item,index) in formLabel" :key="index" :label="item.label">
       <el-input
           v-if="item.type==='input'"
@@ -42,7 +42,11 @@ export default {
     formData:Object,
     isInline:Boolean,
   },
+  data(){
+    return {
 
+    }
+  }
 }
 </script>
 

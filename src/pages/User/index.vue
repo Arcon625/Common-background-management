@@ -102,6 +102,7 @@ export default {
         age:'',
         birth:'',
       },
+      baseFormData:{},
       searchForm:{
         keyword:''
       },
@@ -200,7 +201,9 @@ export default {
     editUser(row){
       this.dialogType = 'edit'
       this.isShow = true
-      this.formData = row
+      console.log(row)
+      this.formData = Object.assign({},row)
+
     },
     delUser(row){
       this.$confirm('此操作将永久删除该文件, 是否继续?','提示',{
@@ -209,7 +212,7 @@ export default {
         type:'warning'
       }).then(() => {
         const id = row.id
-        this.$axios.post('/user/del',{
+        this.$axios.get('/user/del',{
           params:{id}
         }).then((res) => {
           this.$message({

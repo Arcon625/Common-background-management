@@ -21,6 +21,8 @@
 import CommonAside from '@/components/CommonAside'
 import CommonHeader from '@/components/CommonHeader'
 import CommonTag from '@/components/CommonTag'
+import store from '@/store'
+import router from '@/router'
 export default {
   name: "Main",
   components:{

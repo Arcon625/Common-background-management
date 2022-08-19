@@ -31,6 +31,7 @@
             model属性：属性值为对象，该对象是整个表单的数据对象
             inline属性：布尔值，设置内部的el-form-item标签是行内排布，还是块级排布
             label-position属性：字符串（right/left/top)，用于设置内部el-form-item标签的标题的对其方式
+            @submit.native.prevent事件：取消默认在输入框中按下回车提交表单数据的这个默认行为
         el-form-item组件：
             label属性：字符串，用于设置当前el-form-item组件的标签
     2、创建通用form组件:

@@ -50,7 +50,6 @@ export default {
   },
   methods:{
     editHandler(row){
-      console.log(row)
       this.$emit('edit',row)
     },
     deleteHandler(row){
